@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CareerPath AI</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                CareerPath <span>AI</span>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#career-test">Career Test</a></li>
+                <li><a href="#journey">How It Works</a></li>
+                <li><a href="#resources">Resources</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <p class="tagline">AI • EDUCATION • CAREER</p>
+
+            <h1>
+                Discover Your
+                <span>Perfect Career Path</span>
+            </h1>
+
+            <p>
+                Take a simple career test, discover your strengths,
+                learn the right skills, gain experience and move
+                towards your dream job.
+            </p>
+
+
+
+
+            <a href="#career-test" class="btn">
+                Start Career Test
+            </a>
+
+        </div>
+
+        <div class="hero-card">
+
+            <div class="ai-circle">
+                AI
+            </div>
+
+            <h3>Personalized Career Guidance</h3>
+
+            <p>
+                Your interests + skills + strengths
+                = Your career roadmap
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- FEATURES -->
+    <section class="section" id="features">
+
+        <div class="section-title">
+
+            <p>WHAT WE OFFER</p>
+
+            <h2>Key Features</h2>
+
+            <span>
+                Everything you need to build your career.
+            </span>
+
+        </div>
+
+
+        <div class="features-grid">
+
+            <div class="feature-card">
+                <div class="icon">🎯</div>
+                <h3>Career Guidance Test</h3>
+                <p>
+                    Discover suitable careers based on
+                    your interests, strengths and skills.
+                </p>
+            </div>
+
+
+            <div class="feature-card">
+                <div class="icon">📚</div>
+                <h3>Skill Learning Courses</h3>
+                <p>
+                    Learn the right skills required for
+                    your selected career.
+                </p>
+            </div>
+
+
+            <div class="feature-card">
+                <div class="icon">💼</div>
+                <h3>Micro-Internships</h3>
+                <p>
+                    Gain practical experience through
+                    short-term internship opportunities.
+                </p>
+            </div>
+
+
+            <div class="feature-card">
+                <div class="icon">🔎</div>
+                <h3>Job Matching</h3>
+                <p>
+                    Find job opportunities that match
+                    your skills and career profile.
+                </p>
+            </div>
+
+
+            <div class="feature-card">
+                <div class="icon">👨‍🏫</div>
+                <h3>Mentor Connect</h3>
+                <p>
+                    Connect with experienced mentors
+                    for career guidance.
+                </p>
+            </div>
+
+
+            <div class="feature-card">
+                <div class="icon">📄</div>
+                <h3>Resume Builder</h3>
+                <p>
+                    Create a professional resume
+                    according to your career goal.
+                </p>
+            </div>
+
+
+            <div class="feature-card">
+                <div class="icon">🏛️</div>
+                <h3>Govt Exam Prep</h3>
+                <p>
+                    Explore government career resources
+                    and exam preparation opportunities.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CAREER TEST -->
+    <section class="career-test" id="career-test">
+
+        <div class="section-title">
+
+            <p>AI CAREER FINDER</p>
+
+            <h2>Find Your Career Path</h2>
+
+            <span>
+                Answer a few questions to get a personalized suggestion.
+            </span>
+
+        </div>
+
+
+        <div class="test-box">
+
+            <label>What is your education?</label>
+
+            <select id="education">
+                <option value="">Select Education</option>
+                <option value="school">School</option>
+                <option value="college">College Student</option>
+                <option value="graduate">Graduate</option>
+            </select>
+
+
+            <label>What area interests you?</label>
+
+            <select id="interest">
+                <option value="">Select Interest</option>
+                <option value="technology">Technology</option>
+                <option value="data">Data & AI</option>
+                <option value="design">Design</option>
+                <option value="business">Business</option>
+                <option value="government">Government</option>
+            </select>
+
+
+            <label>What is your strongest skill?</label>
+
+            <select id="strength">
+
+                <option value="">Select Strength</option>
+
+                <option value="coding">
+                    Coding & Problem Solving
+                </option>
+
+                <option value="analysis">
+                    Analysis & Mathematics
+                </option>
+
+                <option value="creative">
+                    Creativity
+                </option>
+
+                <option value="communication">
+                    Communication
+                </option>
+
+                <option value="leadership">
+                    Leadership
+                </option>
+
+            </select>
+
+
+            <button onclick="findCareer()" class="btn">
+                Get My Career Path
+            </button>
+
+
+            <!-- RESULT -->
+            <div id="result" class="result">
+
+                <h3 id="careerName"></h3>
+
+                <p id="careerDescription"></p>
+
+                <p>
+                    <strong>Recommended Skills:</strong>
+                </p>
+
+                <p id="careerSkills"></p>
+
+                <div class="result-links">
+
+                    <a
+                        id="courseLink"
+                        href="https://www.skillindiadigital.gov.in/"
+                        target="_blank">
+                        Explore Learning Courses →
+                    </a>
+
+                    <a
+                        href="https://www.ncs.gov.in/"
+                        target="_blank">
+                        Explore Jobs & Career Guidance →
+                    </a>
+
+                    <a
+                        href="https://www.myscheme.gov.in/"
+                        target="_blank">
+                        Explore Government Schemes →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- HOW IT WORKS -->
+    <section class="section" id="journey">
+
+        <div class="section-title">
+
+            <p>YOUR JOURNEY</p>
+
+            <h2>How It Works 🔄</h2>
+
+            <span>
+                A simple step-by-step path from learning to employment.
+            </span>
+
+        </div>
+
+
+        <div class="journey">
+
+            <div class="step">
+
+                <div class="step-number">1</div>
+
+                <h3>Take Career Test</h3>
+
+                <p>
+                    Understand your interests,
+                    strengths and career preferences.
+                </p>
+
+            </div>
+
+
+            <div class="arrow">→</div>
+
+
+            <div class="step">
+
+                <div class="step-number">2</div>
+
+                <h3>Get Roadmap</h3>
+
+                <p>
+                    Receive a personalized career
+                    learning roadmap.
+                </p>
+
+            </div>
+
+
+            <div class="arrow">→</div>
+
+
+            <div class="step">
+
+                <div class="step-number">3</div>
+
+                <h3>Learn Skills</h3>
+
+                <p>
+                    Learn the skills required
+                    for your chosen career.
+                </p>
+
+            </div>
+
+
+            <div class="arrow">→</div>
+
+
+            <div class="step">
+
+                <div class="step-number">4</div>
+
+                <h3>Do Internships</h3>
+
+                <p>
+                    Gain real-world experience
+                    through internships.
+                </p>
+
+            </div>
+
+
+            <div class="arrow">→</div>
+
+
+            <div class="step">
+
+                <div class="step-number">5</div>
+
+                <h3>Build Resume</h3>
+
+                <p>
+                    Create a professional resume
+                    showcasing your skills.
+                </p>
+
+            </div>
+
+
+            <div class="arrow">→</div>
+
+
+            <div class="step">
+
+                <div class="step-number">6</div>
+
+                <h3>Get Job</h3>
+
+                <p>
+                    Find suitable job opportunities
+                    and start your career.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="success-path">
+
+            🚀
+            <strong>
+                Step-by-Step Success Path
+            </strong>
+
+        </div>
+
+    </section>
+
+
+    <!-- GOVERNMENT / RESOURCES -->
+    <section class="resources" id="resources">
+
+        <div class="section-title">
+
+            <p>CAREER RESOURCES</p>
+
+            <h2>Government Support</h2>
+
+            <span>
+                Explore official platforms for career,
+                skills and government opportunities.
+            </span>
+
+        </div>
+
+
+        <div class="resource-grid">
+
+            <div class="resource-card">
+
+                <h3>National Career Service</h3>
+
+                <p>
+                    Career guidance, job search,
+                    counselling and employment services.
+                </p>
+
+                <a
+                    href="https://www.ncs.gov.in/"
+                    target="_blank">
+                    Visit NCS →
+                </a>
+
+            </div>
+
+
+            <div class="resource-card">
+
+                <h3>Skill India Digital</h3>
+
+                <p>
+                    Explore skill courses, training
+                    and career development opportunities.
+                </p>
+
+                <a
+                    href="https://www.skillindiadigital.gov.in/"
+                    target="_blank">
+                    Visit Skill India →
+                </a>
+
+            </div>
+
+
+            <div class="resource-card">
+
+                <h3>myScheme</h3>
+
+                <p>
+                    Discover government schemes
+                    based on your profile and eligibility.
+                </p>
+
+                <a
+                    href="https://www.myscheme.gov.in/"
+                    target="_blank">
+                    Visit myScheme →
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="logo">
+            CareerPath <span>AI</span>
+        </div>
+
+        <p>
+            AI-powered career guidance for students and job seekers.
+        </p>
+
+        <p>
+            © 2026 CareerPath AI. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
